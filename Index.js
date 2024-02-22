@@ -27,6 +27,17 @@ function factorial(num1){
         return (num1 * factorial(num1 - 1));
 }}
 
+function exponente(base,exponencial){
+    if (exponencial == 0){
+        return1;
+    } else {
+        var resultado =1;
+        for (var i =0; i <exponencial; i++){
+            resultado *= base;
+        }
+        return resultado;
+    }
+}
 
   // Función principal del programa
   function calculadora() {
@@ -36,7 +47,7 @@ function factorial(num1){
     var num1 = parseFloat(prompt("Ingrese el primer número:"));
     var num2, resultado;
   
-    if (opcion !== "5" && opcion !== "7") {
+    if (opcion !== "5" && opcion !== "6") {
       num2 = parseFloat(prompt("Ingrese el segundo número:"));
     }
   
@@ -56,10 +67,12 @@ function factorial(num1){
       case "5":
         resultado = factorial(num1);
         break;
+
       case "6":
-        var exponenteNum = parseFloat(prompt("Ingrese el exponente:"));
-        resultado = exponente(num1, exponenteNum);
-        break;
+      var exponenteNum = parseFloat(prompt("Ingrese el exponente:"));
+      resultado = exponente(num1, exponenteNum);
+      break;
+
       case "7":
         resultado = raizCuadrada(num1);
         break;
