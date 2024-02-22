@@ -39,6 +39,18 @@ function exponente(base,exponencial){
     }
 }
 
+function raizCuadrada(numero){
+    if (numero < 0){
+        return NaN;
+    }
+    var aproximacion = numero/2
+    for (var i =0; i <10; i++){
+        aproximacion =(aproximacion + numero/aproximacion)/2
+    }
+    return aproximacion;
+
+}
+
   // Función principal del programa
   function calculadora() {
     var opcion = prompt(
@@ -47,7 +59,7 @@ function exponente(base,exponencial){
     var num1 = parseFloat(prompt("Ingrese el primer número:"));
     var num2, resultado;
   
-    if (opcion !== "5" && opcion !== "6") {
+    if (opcion !== "5" && opcion !== "6" && opcion !== "7") {
       num2 = parseFloat(prompt("Ingrese el segundo número:"));
     }
   
@@ -76,6 +88,7 @@ function exponente(base,exponencial){
       case "7":
         resultado = raizCuadrada(num1);
         break;
+
       default:
         resultado = "Opción no válida";
         break;
