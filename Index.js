@@ -1,4 +1,3 @@
-// Función para sumar dos números
 function sumar(num1, num2) {
     return num1 + num2;
   }
@@ -97,5 +96,5 @@ function raizCuadrada(numero){
     alert("El resultado es: " + resultado);
   }
   
-  // Llamar a la función principal
-  calculadora();
+
+calculadora();
